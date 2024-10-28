@@ -452,13 +452,12 @@ img {
 
 .footer-subscribe {
   width: 453px;
-  align-items: center;
+  align-items: flex-start;
   margin-left: auto;
-  justify-content: space-between;
 }
 
 .footer-text-subscribe {
-  text-align: center;
+  text-align: left;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;

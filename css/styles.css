@@ -577,6 +577,7 @@ img {
 }
 
 .modal-title {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -586,7 +587,7 @@ img {
 }
 
 .modal-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .input-wrapper {
@@ -609,11 +610,12 @@ img {
 
 .modal-label {
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
   margin-bottom: 4px;
+  line-height: 1.17;
 }
 
 .modal-input-icon {
@@ -632,13 +634,22 @@ img {
 }
 
 .modal-textarea {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   width: 100%;
   height: 120px;
+  color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   resize: none;
   padding: 8px 16px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+..modal-textarea:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-textarea::placeholder {
@@ -648,7 +659,7 @@ img {
   color: rgba(46, 47, 66, 0.4);
 }
 
-.modal-check {
+.modal-field-check {
   margin-bottom: 24px;
 }
 .modal-check-text {
@@ -659,19 +670,22 @@ img {
   align-items: center;
 }
 
-.modal-check-text span {
+.modal-check-policy {
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:checked + .modal-check-text span {
+.modal-check:checked + .modal-check-policy {
   background-color: #404bbf;
   border: none;
   fill: #fff;
@@ -685,13 +699,17 @@ img {
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
-  cursor: pointer;
+
   min-width: 169px;
   height: 56px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
